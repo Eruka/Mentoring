@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.40629.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Multithreading", "Multithreading", "{056F91FE-BDCF-42DD-8E26-94311155BEB3}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Multithreading", "Multithreading", "{2FE893AC-4D63-4276-AC69-F244A2D286ED}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnobservedTaskException", "..\..\..\Other\Multithreading\TasksWithExceptions\UnobservedTaskException.csproj", "{8B4FFB72-3645-41E2-ABAB-49C063E42FAF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnobservedTaskException", "Multithreading\TasksWithExceptions\UnobservedTaskException.csproj", "{8B4FFB72-3645-41E2-ABAB-49C063E42FAF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -22,6 +22,6 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{8B4FFB72-3645-41E2-ABAB-49C063E42FAF} = {056F91FE-BDCF-42DD-8E26-94311155BEB3}
+		{8B4FFB72-3645-41E2-ABAB-49C063E42FAF} = {2FE893AC-4D63-4276-AC69-F244A2D286ED}
 	EndGlobalSection
 EndGlobal
