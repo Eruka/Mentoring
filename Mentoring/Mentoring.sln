@@ -11,6 +11,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskContinueWith", "Multith
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskCancellationTest", "Multithreading\TaskCancellationTest\TaskCancellationTest.csproj", "{49146AB5-4988-4B64-A2A8-1ECBAA7BFE6A}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AsyncAwait", "AsyncAwait", "{F2BEBACF-D4BA-47AA-A056-9F5255F0EB2E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsyncAwait", "AsyncAwait\AsyncAwait\AsyncAwait.csproj", "{51EDDDA4-0EE4-48AB-B007-FD69F9D85E1B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,6 +33,10 @@ Global
 		{49146AB5-4988-4B64-A2A8-1ECBAA7BFE6A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{49146AB5-4988-4B64-A2A8-1ECBAA7BFE6A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{49146AB5-4988-4B64-A2A8-1ECBAA7BFE6A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{51EDDDA4-0EE4-48AB-B007-FD69F9D85E1B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{51EDDDA4-0EE4-48AB-B007-FD69F9D85E1B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{51EDDDA4-0EE4-48AB-B007-FD69F9D85E1B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{51EDDDA4-0EE4-48AB-B007-FD69F9D85E1B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -37,5 +45,6 @@ Global
 		{8B4FFB72-3645-41E2-ABAB-49C063E42FAF} = {2FE893AC-4D63-4276-AC69-F244A2D286ED}
 		{83C6B451-370E-4E8D-910E-F55278755218} = {2FE893AC-4D63-4276-AC69-F244A2D286ED}
 		{49146AB5-4988-4B64-A2A8-1ECBAA7BFE6A} = {2FE893AC-4D63-4276-AC69-F244A2D286ED}
+		{51EDDDA4-0EE4-48AB-B007-FD69F9D85E1B} = {F2BEBACF-D4BA-47AA-A056-9F5255F0EB2E}
 	EndGlobalSection
 EndGlobal
