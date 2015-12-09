@@ -61,7 +61,8 @@ namespace IQueryableTask.Provider
 
         protected override Expression VisitMember(MemberExpression node)
         {
-            resultString.Append(node.Member.Name);
+            var memberName = node.Member.Name.Substring(0, 1).ToLower() + node.Member.Name.Substring(1);
+            resultString.Append(memberName);
 
             return base.VisitMember(node);
         }
