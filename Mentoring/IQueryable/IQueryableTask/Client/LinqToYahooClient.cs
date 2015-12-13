@@ -18,7 +18,8 @@ namespace IQueryableTask.Client
             Uri request = GenerateRequestUrl(query);
             var resultString = client.GetStringAsync(request).Result;
 
-            var data = JObject.Parse(resultString).SelectToken("query").SelectToken("results").ToObject<YahooResponse<T>>() ;
+
+            var data = JObject.Parse(resultString).SelectToken("query").SelectToken("results").ToObject(type).ToObject<YahooResponse<T>>() ;
 
             return data.Results;
         }
