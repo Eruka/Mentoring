@@ -30,13 +30,8 @@ namespace NotePadWinForms
             foreach (var name in names)
             {
                 var plugin = new NotePadPlugin(name);
-                //plugin.Domain.UnhandledException += (o, e) =>
-                //{
-                //   MessageBox.Show(plugin.Domain.FriendlyName);
-                //    AppDomain.Unload(plugin.Domain);
-                //};
-
-                //plugin.Domain.DomainUnload += (o, e) => MessageBox.Show("Unloaded");
+                plugin.Domain.DomainUnload += (o, e) => MessageBox.Show("Unloaded");
+                //plugin.Domain.DomainUnload += (o, e) => MessageBox.Show("AppDomain " + name + " Unloaded");
                 plugins.Add(plugin);
             }
 
@@ -49,7 +44,13 @@ namespace NotePadWinForms
         private void TransformBtn_Click(object sender, EventArgs e)
         {
             NotePadPlugin selectedPlugin = (NotePadPlugin)PluginsCmbBox.SelectedItem;
-            ResultTextBox.Text = selectedPlugin.Instanse.TransformText(SourseTextBox.Text);
+            try {
+                ResultTextBox.Text = selectedPlugin.Instanse.TransformText(SourseTextBox.Text);
+            }
+            catch
+            {
+                AppDomain.Unload(selectedPlugin.Domain);
+            }
         }
 
         private void PluginsCmbBox_SelectedValueChanged(object sender, EventArgs e)
