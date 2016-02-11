@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.23107.0
+# Visual Studio 2013
+VisualStudioVersion = 12.0.40629.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Multithreading", "Multithreading", "{2FE893AC-4D63-4276-AC69-F244A2D286ED}"
 EndProject
@@ -34,6 +34,10 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NotePad.Plugins.ToUpperConverter", "AppDomain\NotePad.Plugins\ToUpperConverter\NotePad.Plugins.ToUpperConverter.csproj", "{76EC89CA-09C8-4863-B7BD-F60F8FD6CCED}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NotePad.WinFormsHost", "AppDomain\NotePad.WinFormsHost\NotePad.WinFormsHost.csproj", "{F24E2DB2-159E-4B0E-BA5C-AB0F8C5B7CAC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CustomSerialization", "CustomSerialization", "{87AB72A9-BCDB-4CB5-B80B-35C4B5A7E7DB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomSerialization", "CustomSerialization\CustomSerialization.csproj", "{285A8F40-93D8-4842-AF4E-63D00B93DA43}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -85,6 +89,10 @@ Global
 		{F24E2DB2-159E-4B0E-BA5C-AB0F8C5B7CAC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F24E2DB2-159E-4B0E-BA5C-AB0F8C5B7CAC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F24E2DB2-159E-4B0E-BA5C-AB0F8C5B7CAC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{285A8F40-93D8-4842-AF4E-63D00B93DA43}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{285A8F40-93D8-4842-AF4E-63D00B93DA43}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{285A8F40-93D8-4842-AF4E-63D00B93DA43}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{285A8F40-93D8-4842-AF4E-63D00B93DA43}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -103,5 +111,6 @@ Global
 		{5791960E-C786-4D9D-8C09-74F3A9EFCDE3} = {B20E9A81-8F3B-4769-8C07-E33771B736A7}
 		{76EC89CA-09C8-4863-B7BD-F60F8FD6CCED} = {B20E9A81-8F3B-4769-8C07-E33771B736A7}
 		{F24E2DB2-159E-4B0E-BA5C-AB0F8C5B7CAC} = {B7FD8C2F-B36E-4249-B83B-8319EC6A1A4A}
+		{285A8F40-93D8-4842-AF4E-63D00B93DA43} = {87AB72A9-BCDB-4CB5-B80B-35C4B5A7E7DB}
 	EndGlobalSection
 EndGlobal
