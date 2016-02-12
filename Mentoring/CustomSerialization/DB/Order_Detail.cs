@@ -1,3 +1,4 @@
+using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -26,5 +27,17 @@ namespace CustomSerialization.DB
         public virtual Order Order { get; set; }
 
         public virtual Product Product { get; set; }
+
+        internal void Print()
+        {
+            Console.WriteLine("*********************************");
+
+            Console.WriteLine(OrderID);
+            Console.WriteLine(UnitPrice);
+            Console.WriteLine(Quantity);
+            Console.WriteLine(Discount);
+
+            Console.WriteLine("*********************************");
+        }
     }
 }
