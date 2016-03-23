@@ -15,13 +15,12 @@ namespace ProfileSample.Controllers
         {
             var context = new ProfileSampleEntities();
 
-            var sources = context.ImgSources.Take(20).Select(x => x.Id);
+            var sources = context.ImgSources.Take(20);
             
             var model = new List<ImageModel>();
 
-            foreach (var source in sources)
+            foreach (var item in sources)
             {
-                var item = context.ImgSources.Find(source);
 
                 var obj = new ImageModel()
                 {
@@ -38,6 +37,7 @@ namespace ProfileSample.Controllers
         public ActionResult Convert()
         {
             var files = Directory.GetFiles(Server.MapPath("~/Content/Img"), "*.jpg");
+            var images = new List<ImgSource>();
 
             using (var context = new ProfileSampleEntities())
             {
@@ -54,10 +54,10 @@ namespace ProfileSample.Controllers
                             Name = Path.GetFileName(file),
                             Data = buff,
                         };
-
-                        context.ImgSources.Add(entity);
-                        context.SaveChanges();
+                        images.Add(entity);
                     }
+                    context.ImgSources.AddRange(images);
+                    context.SaveChanges();
                 }
                 
             }
