@@ -9,6 +9,7 @@ using System.Threading;
 namespace CustomSerialization.DB
 {
     [Serializable]
+    [DataContract(IsReference = true)]
     public class Category
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -18,18 +19,22 @@ namespace CustomSerialization.DB
             Products = new HashSet<Product>();
         }
 
+        [DataMember]
         public int CategoryID { get; set; }
 
+        [DataMember]
         [Required]
         [StringLength(15)]
         public string CategoryName { get; set; }
 
+        [DataMember]
         [Column(TypeName = "ntext")]
         public string Description { get; set; }
 
         //[Column(TypeName = "image")]
         //public byte[] Picture { get; set; }
 
+        [DataMember]
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Product> Products { get; set; }
 

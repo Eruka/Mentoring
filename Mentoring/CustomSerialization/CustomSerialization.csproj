@@ -64,6 +64,7 @@
     <Compile Include="SerializationSolutions.cs" />
     <Compile Include="TestHelpers\OrderDataContractSurrogate.cs" />
     <Compile Include="TestHelpers\OrderDetailSerializationSurrogate.cs" />
+    <Compile Include="TestHelpers\Reflection.cs" />
     <Compile Include="TestHelpers\SerializationTester.cs" />
     <Compile Include="TestHelpers\SoapFormatterTester.cs" />
     <Compile Include="TestHelpers\XmlDataContractSerializerTester.cs" />

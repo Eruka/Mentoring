@@ -43,25 +43,31 @@ namespace CustomSerialization.TestHelpers
 
             if ( obj.GetType().Namespace == "System.Data.Entity.DynamicProxies" && obj.GetType().BaseType != null)
             {
-                Order orderProxy = obj as Order;
-                if (orderProxy != null)
-                {
-                    Order order = new Order();
+                //Order orderProxy = obj as Order;
+                var result = Activator.CreateInstance(targetType);
+                //var pr = obj.GetType().GetProperties();
 
-                    order.OrderID = orderProxy.OrderID;
-                    order.CustomerID = orderProxy.CustomerID;
-                    order.EmployeeID = orderProxy.EmployeeID;
-                    order.OrderDate = orderProxy.OrderDate;
-                    order.Order_Details = orderProxy.Order_Details.Select(o => new Order_Detail()
-                    {
-                        OrderID = o.OrderID,
-                        Discount = o.Discount,
-                        Quantity = o.Quantity,
-                        UnitPrice =  o.UnitPrice
-                    }).ToList();
+                obj.CopyProperties(result);
 
-                    return order;
-                };
+                //if (orderProxy != null)
+                //{
+                //    Order order = new Order();
+
+                //    order.OrderID = orderProxy.OrderID;
+                //    order.CustomerID = orderProxy.CustomerID;
+                //    order.EmployeeID = orderProxy.EmployeeID;
+                //    order.OrderDate = orderProxy.OrderDate;
+                //    order.Order_Details = orderProxy.Order_Details.Select(o => new Order_Detail()
+                //    {
+                //        OrderID = o.OrderID,
+                //        Discount = o.Discount,
+                //        Quantity = o.Quantity,
+                //        UnitPrice =  o.UnitPrice
+                //    }).ToList();
+
+                //    return order;
+                //};
+                return result;
             }
             return obj;
         }
