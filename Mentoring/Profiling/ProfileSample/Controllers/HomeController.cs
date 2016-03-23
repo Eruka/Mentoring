@@ -38,7 +38,6 @@ namespace ProfileSample.Controllers
         public ActionResult Convert()
         {
             var files = Directory.GetFiles(Server.MapPath("~/Content/Img"), "*.jpg");
-            var imgs = new List<ImgSource>();
 
             using (var context = new ProfileSampleEntities())
             {
@@ -56,15 +55,11 @@ namespace ProfileSample.Controllers
                             Data = buff,
                         };
 
-                        imgs.Add(entity);
-
-                        //context.ImgSources.Add(entity);
-                        
+                        context.ImgSources.Add(entity);
+                        context.SaveChanges();
                     }
                 }
-
-                context.ImgSources.AddRange(imgs);
-                context.SaveChanges();
+                
             }
 
             return RedirectToAction("Index");
